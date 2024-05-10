@@ -12,7 +12,7 @@ DATE="`date +"%Y-%m-%d"`"
 FRAMEWORK_NAME="MailCore2.xcframework"
 ARCHIVE_NAME="MailCore2-$DATE.xcframework.zip"
 MANIFEST_PATH="$MAILCORE_DIR/Package.swift"
-BASE_URL="https://github.com/MailCore/mailcore2/raw/master/bin"
+BASE_URL="https://github.com/worksmobile/mailcore2/tree/master/bin"
 FULL_URL="$BASE_URL/$ARCHIVE_NAME"
 SUCCESS_MESSAGE="
 -------------------
@@ -38,6 +38,9 @@ if [[ -d "$BUILD_DIR/$FRAMEWORK_NAME" ]]; then
     sed -i.bak "s~url: \"\(.*\)\"~url: \"$FULL_URL\"~g" $MANIFEST_PATH
     sed -i.bak "s~checksum: \"\(.*\)\"~checksum: \"$CHECKSUM\"~g" $MANIFEST_PATH
     rm $MANIFEST_PATH.bak
+
+   # Move the result to the path that Package.swift manifest file refers
+    mv "$BUILD_DIR/$ARCHIVE_NAME" "$MAILCORE_DIR/bin"
     
     echo "$SUCCESS_MESSAGE"
 fi
