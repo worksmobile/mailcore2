@@ -10,6 +10,11 @@ MailCore 2 provides a simple and asynchronous Objective-C API to work with the e
 
 [![Build Status](https://travis-ci.org/MailCore/mailcore2.png?branch=master)](https://travis-ci.org/MailCore/mailcore2)
 
+## Build ##
+1. Run `build-mailcore2-xcframework-spm.sh` in script folder.
+2. Commit everything and merge to `master-works`.
+3. Release new version from `master-works` and use it.
+
 
 ## Installation ##
 
