@@ -12,7 +12,7 @@ DATE="`date +"%Y-%m-%d"`"
 FRAMEWORK_NAME="MailCore2.xcframework"
 ARCHIVE_NAME="MailCore2-$DATE.xcframework.zip"
 MANIFEST_PATH="$MAILCORE_DIR/Package.swift"
-BASE_URL="https://github.com/worksmobile/mailcore2/tree/master/bin"
+BASE_URL="https://github.com/worksmobile/mailcore2/tree/master-works/bin"
 FULL_URL="$BASE_URL/$ARCHIVE_NAME"
 SUCCESS_MESSAGE="
 -------------------
